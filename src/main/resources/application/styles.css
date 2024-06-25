@@ -1,0 +1,40 @@
+/* styles.css */
+
+.main-container {
+    -fx-padding: 20px; /* Add padding around the VBox */
+    -fx-spacing: 10px; /* Add spacing between child nodes in the VBox */
+}
+
+.action-button {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px; /* Rounded corners */
+}
+
+.book-table-view, .transaction-table-view {
+    -fx-padding: 30px; /* Add padding inside the TableView */
+    -fx-spacing: 30px;
+}
+
+.margin-left {
+    -fx-padding: 0 0 0 20px; /* Top, Right, Bottom, Left */
+}
+
+.margin-top {
+    -fx-padding: 20px 0 0 0; /* Top, Right, Bottom, Left */
+}
+
+.text-field {
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+}
+
+.admin-button {
+    -fx-background-color: #4CAF50; /* Green background */
+      -fx-text-fill: white; /* White text */
+      -fx-font-size: 14px;
+      -fx-padding: 10px 20px;
+      -fx-background-radius: 5px;
+}

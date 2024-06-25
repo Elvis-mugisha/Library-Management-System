@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.Controller.UserPage"
+      styleClass="main-container"
+      stylesheets="@styles.css">
+
+    <Text text="Available Books" style="-fx-font-size: 18px; -fx-font-weight: bold;" styleClass="margin-left"/>
+
+    <TableView fx:id="bookTableView" styleClass="book-table-view">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="title" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="author" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <Button fx:id="borrowButton" text="Borrow" onAction="#borrowBook" styleClass="action-button"/>
+
+    <Text text="Borrowed Books" style="-fx-font-size: 18px; -fx-font-weight: bold;" styleClass="margin-left margin-top"/>
+
+    <TableView fx:id="borrowedBooksTableView" styleClass="borrowed-books-table">
+        <columns>
+            <TableColumn fx:id="borrowedTitleColumn" text="Title" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="title" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="borrowedAuthorColumn" text="Author" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="author" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="borrowedDateColumn" text="Borrowed Date" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="borrowedDate" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+</VBox>

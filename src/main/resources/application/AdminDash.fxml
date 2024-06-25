@@ -1,0 +1,44 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.Controller.AdminPage"
+      styleClass="main-container"
+      stylesheets="@styles.css">
+
+    <TextField fx:id="bookTitleField" promptText="Book Title" styleClass="text-field"/>
+    <TextField fx:id="authorField" promptText="Author" styleClass="text-field"/>
+
+    <Button text="Add Book" onAction="#addBook" styleClass="admin-button"/>
+    <Button text="Edit Book" onAction="#editBook" styleClass="admin-button"/>
+    <Button text="Delete Book" onAction="#deleteBook" styleClass="admin-button"/>
+
+
+    <!-- TableView for displaying books -->
+    <TableView fx:id="bookTableView" styleClass="book-table-view">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="150"/>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="150"/>
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <Button text="Approve" onAction="#approveBook" styleClass="admin-button"/>
+    <Button text="Reject" onAction="#rejectBook" styleClass="admin-button"/>
+
+    <!-- TableView for displaying transactions -->
+    <TableView fx:id="transactionTableView" styleClass="transaction-table-view">
+        <columns>
+            <TableColumn fx:id="transactionIdColumn" text="Transaction ID" prefWidth="150"/>
+            <TableColumn fx:id="userIdColumn" text="User ID" prefWidth="150"/>
+            <TableColumn fx:id="bookIdColumn" text="Book ID" prefWidth="150"/>
+            <TableColumn fx:id="transactionDateColumn" text="Transaction Date" prefWidth="150"/>
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+</VBox>
